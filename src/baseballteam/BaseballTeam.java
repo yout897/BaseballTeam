@@ -13,7 +13,7 @@ package baseballteam;
  */
 public class BaseballTeam extends Sports implements Stats{
 
-    Stats stat = new Stats() {};
+    
     
     /**
      * constructor
@@ -32,6 +32,13 @@ public class BaseballTeam extends Sports implements Stats{
                "\nTotal Wins: " + totWins +
                "\nTotal Ties: " + totTies +
                "\nTotal Losses: " + totLosses +
-               "\nTotal Overall Points: " + stat.overallPoints(totWins, totTies, totTies));
+               "\nTotal Overall Points: " + overallPoints(totWins, totTies, totTies));
     }   
+
+    public int overallPoints(int wins, int ties, int losses) {
+        int points = 0;
+        points += wins*2;
+        points += ties;
+        return points;
+    }
 }

@@ -11,18 +11,13 @@ package baseballteam;
  * Date: 09/11/2016
  * Purpose: Calculate total the stats for a team
  */
-abstract class Stats {
+public interface Stats {
     
     /**
      * Calculates the total points for a team
      * pre: wins, ties, losses
      * post: total points
      */
-    public int overallPoints(int wins,int ties,int losses){
-        int points = 0;
-        points += wins*2;
-        points += ties;
-        return points;
-    }
+    abstract int overallPoints(int wins,int ties,int losses);
     
 }
